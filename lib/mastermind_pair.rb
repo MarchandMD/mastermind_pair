@@ -29,7 +29,7 @@ class Game
       input = gets.chomp.downcase
     end
     board.prompt_player
-    input  
+    input
   end
 
   def get_guess
@@ -107,13 +107,12 @@ class Game
 
   def display_the_board
     board.guesses.reverse.each_with_index do |row, i|
-      print row, board.feedback.reverse[i] , "\n"
+      print row, board.feedback.reverse[i], "\n"
     end
   end
 end
 
 class Board
-
   attr_accessor :colors, :secret_code, :guesses, :feedback
 
   def initialize
